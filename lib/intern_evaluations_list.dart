@@ -231,12 +231,6 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
     }).toList();
   }
 
-  void _applyFilter() {
-    setState(() {
-      applyFilters();
-    });
-  }
-
   void _resetFilters() {
     setState(() {
       selectedStudentId = null;

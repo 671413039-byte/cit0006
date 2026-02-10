@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart'; // ✨ 1. Import Provider
 import 'user_model.dart';             // ✨ 2. Import UserModel
 import 'splash_screen.dart'; 
+import 'config/app_theme.dart';       // ✨ Import Theme
 
 void main() {
   // ✨ 3. ครอบแอปของคุณด้วย Provider
@@ -21,10 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CIT0006',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.getTheme(),
       home: SplashScreen(), 
     );
   }

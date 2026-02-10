@@ -145,7 +145,6 @@ class _ListStudentPageState extends State<ListStudentPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("ข้อมูลนักเรียน"),
-        backgroundColor: Colors.green,
         actions: [
           ElevatedButton(
             onPressed: () {

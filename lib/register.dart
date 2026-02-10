@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'config/app_theme.dart';
 
 class RegisterUserForm extends StatefulWidget {
   const RegisterUserForm({super.key});
@@ -78,61 +79,98 @@ class _RegisterUserFormState extends State<RegisterUserForm> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("ลงทะเบียนผู้ใช้งาน"),
-        backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(AppTheme.paddingXL),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               TextFormField(
                 controller: firstnameController,
-                decoration: const InputDecoration(labelText: "ชื่อ"),
+                decoration: InputDecoration(
+                  labelText: "ชื่อ",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
                 validator: (value) => value!.isEmpty ? "กรุณากรอกชื่อ" : null,
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: lastnameController,
-                decoration: const InputDecoration(labelText: "นามสกุล"),
+                decoration: InputDecoration(
+                  labelText: "นามสกุล",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
                 validator: (value) =>
                     value!.isEmpty ? "กรุณากรอกนามสกุล" : null,
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: addressController,
-                decoration: const InputDecoration(labelText: "ที่อยู่"),
+                decoration: InputDecoration(
+                  labelText: "ที่อยู่",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: officeNameController,
-                decoration: const InputDecoration(labelText: "ชื่อหน่วยงาน"),
+                decoration: InputDecoration(
+                  labelText: "ชื่อหน่วยงาน",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: telnoController,
-                decoration: const InputDecoration(labelText: "เบอร์โทรศัพท์"),
+                decoration: InputDecoration(
+                  labelText: "เบอร์โทรศัพท์",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
                 keyboardType: TextInputType.phone,
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: emailController,
-                decoration: const InputDecoration(labelText: "อีเมล"),
+                decoration: InputDecoration(
+                  labelText: "อีเมล",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => value!.isEmpty ? "กรุณากรอกอีเมล" : null,
               ),
+              const SizedBox(height: AppTheme.paddingM),
               TextFormField(
                 controller: passwordController,
-                decoration: const InputDecoration(labelText: "รหัสผ่าน"),
+                decoration: InputDecoration(
+                  labelText: "รหัสผ่าน",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
+                  ),
+                ),
                 obscureText: true,
                 validator: (value) =>
                     value!.isEmpty ? "กรุณากรอกรหัสผ่าน" : null,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppTheme.paddingXL),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => submitRegister(context),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    textStyle: const TextStyle(fontSize: 18),
+                  style: AppTheme.primaryButtonStyle().copyWith(
+                    minimumSize: MaterialStateProperty.all(const Size.fromHeight(48)),
                   ),
                   child: const Text("ลงทะเบียน"),
                 ),

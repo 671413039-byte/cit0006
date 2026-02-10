@@ -2,16 +2,12 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
-import 'user_model.dart';
-import 'companylocation.dart';
 
 // Import หน้าแบบฟอร์ม
 import 'Company.dart';
+import 'CompanyLocation.dart';
 
 class ListCompanyPage extends StatefulWidget {
   const ListCompanyPage({super.key});
@@ -175,7 +171,6 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("สถานประกอบการ"),
-        backgroundColor: Colors.green,
         actions: [
           ElevatedButton(
             onPressed: () {
