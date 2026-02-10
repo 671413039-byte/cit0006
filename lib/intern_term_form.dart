@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'config/app_theme.dart';
 
 class InternTermFormPage extends StatefulWidget {
   final Map<String, dynamic>? term; // ถ้ามีคือแก้ไข ถ้า null คือเพิ่มใหม่
@@ -67,11 +66,14 @@ class _InternTermFormPageState extends State<InternTermFormPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.term == null ? 'เพิ่มภาคการศึกษา' : 'แก้ไขภาคการศึกษา'),
+        backgroundColor: Colors.green[700],
+        foregroundColor: Colors.white,
+        elevation: 0,
       ),
-      backgroundColor: AppTheme.backgroundColor,
+      backgroundColor: const Color(0xFFF8FFF4),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppTheme.paddingXL),
+          padding: const EdgeInsets.all(24.0),
           child: Form(
             key: _formKey,
             child: Column(

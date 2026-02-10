@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'loginpage.dart';
-import 'config/app_theme.dart';
-
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,23 +12,39 @@ class SplashScreen extends StatelessWidget {
             SizedBox(height: 20.0),
             Text(
               'Welcome!! CSIT Family',
-              style: AppTheme.headingLarge.copyWith(color: AppTheme.primaryColor),
+              style: TextStyle(
+                fontSize: 30, // ขนาดตัวอักษร
+                color: Colors.blue, // สีตัวอักษร
+                fontWeight:
+                  FontWeight.bold, // การกำหนดความหนาของตัวอักษร (ถ้าต้องการ)
+              ),
             ),
             SizedBox(height: 20.0),
             SizedBox(
-              child: ElevatedButton(
+              child: OutlinedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const LoginPage()),
                   );
-                },
-                style: AppTheme.primaryButtonStyle(),
+                  },// เมื่อปุ่มถูกคลิก
+                  //Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  //  builder: (context) => LoginScreen(),
+                  //));
+                style: OutlinedButton.styleFrom(
+                  fixedSize: Size(300, 50),
+                  side: BorderSide(
+                    color: Color.fromARGB(
+                      255, 164, 128, 225), // Set the outline color
+                    width: 2.0, // Set the outline width
+                  ),
+                  backgroundColor: Color.fromARGB(
+                    255, 164, 128, 225), // Set the background color
+                ),
                 child: Text(
                   'เริ่มใช้งาน',
-                  style: AppTheme.bodyMedium.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
+                  style: TextStyle(
+                    color: Colors.white, // Set the text color
                   ),
                 ),
               ),

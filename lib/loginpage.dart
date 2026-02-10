@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import 'menu.dart';
 import 'user_model.dart';
 import 'register.dart';
-import 'config/app_theme.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -88,48 +87,57 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: const Text('ยินดีต้อนรับ/Welcome'),
-        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 3, 125, 91),
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(width: 10),
+            const Text(
+              'ยินดีต้อนรับ/Welcome',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(AppTheme.paddingXL),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               Image.asset('images/logo.png', width: 400, height: 400),
-              const SizedBox(height: AppTheme.paddingL),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: usernameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'ชื่อผู้ใช้งาน (Username)',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
-                  ),
+                  border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: AppTheme.paddingL),
+              const SizedBox(height: 15),
               TextFormField(
                 controller: passwordController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'รหัสผ่าน (Password)',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppTheme.radiusMedium),
-                  ),
+                  border: OutlineInputBorder(),
                 ),
                 obscureText: true,
               ),
-              const SizedBox(height: AppTheme.paddingXL),
+              const SizedBox(height: 20),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => submitLogin(context),
-                  style: AppTheme.primaryButtonStyle().copyWith(
-                    minimumSize: MaterialStateProperty.all(const Size.fromHeight(48)),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    textStyle: const TextStyle(fontSize: 18),
                   ),
                   child: const Text('เข้าสู่ระบบ (Login)'),
                 ),
               ),
-              const SizedBox(height: AppTheme.paddingM),
+              const SizedBox(height: 8),
               TextButton(
                 onPressed: () {
                   Navigator.of(context).push(

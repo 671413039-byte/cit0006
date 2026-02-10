@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 import 'intern_term_form.dart';
-import 'config/app_theme.dart';
 
 class InternTermListPage extends StatefulWidget {
   @override
@@ -230,6 +229,8 @@ class _InternTermListPageState extends State<InternTermListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ข้อมูลภาคการศึกษา'),
+        backgroundColor: Colors.green,
+        centerTitle: true,
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -239,13 +240,13 @@ class _InternTermListPageState extends State<InternTermListPage> {
               label: const Text("เพิ่ม"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: AppTheme.primaryColor,
+                foregroundColor: Colors.green,
               ),
             ),
           ),
         ],
       ),
-      backgroundColor: AppTheme.backgroundColor,
+      backgroundColor: const Color(0xFFF8FFF4),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : (error != null

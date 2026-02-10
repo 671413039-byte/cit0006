@@ -151,6 +151,7 @@ class _ListSpecialProjectPageState extends State<ListSpecialProjectPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("โครงงานพิเศษ"),
+        backgroundColor: Colors.green,
         actions: [
           // ปุ่มเพิ่มข้อมูล (ส่ง xcase = 1)
           ElevatedButton(

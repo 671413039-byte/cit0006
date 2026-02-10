@@ -1,3 +1,4 @@
+import 'package:cit0006/Special_project.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +11,6 @@ import 'intern_term_list.dart'; // import หน้าแสดงภาคก�
 import 'internship_detail.dart'; // import หน้าข้อมูลฝึกประสบการณ์
 import 'daily_work_list.dart'; // import หน้าบันทึกปฏิบัติงาน
 import 'intern_evaluations_list.dart'; // import หน้าประเมินผลสถานประกอบการ
-import 'config/app_theme.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -35,6 +35,19 @@ class MenuPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("เมนูหลัก"),
         automaticallyImplyLeading: false,
+        centerTitle: true,
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.exit_to_app),
+            tooltip: 'Quit',
+            onPressed: () {
+              if (Platform.isAndroid || Platform.isIOS) {
+                SystemNavigator.pop();
+              }
+            },
+          ),
+        ],
       ),
       body: SafeArea(
         child: LayoutBuilder(
@@ -174,7 +187,7 @@ class MenuPage extends StatelessWidget {
       ),
       bottomNavigationBar: Card(
         margin: EdgeInsets.zero,
-        color: AppTheme.primaryColor,
+        color: const Color.fromARGB(255, 5, 122, 60),
         elevation: 4,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
@@ -192,43 +205,38 @@ class MenuPage extends StatelessWidget {
                   children: [
                     Text(
                       "${user.firstname} ${user.lastname}",
-                      style: AppTheme.bodyMedium.copyWith(
-                        color: Colors.white,
+                      style: const TextStyle(
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                     Text(
-                      user.office_name,
-                      style: AppTheme.bodySmall.copyWith(
+                      user.office_name ?? "-", // กัน error ถ้าค่าเป็น null
+                      style: const TextStyle(
+                        fontSize: 12,
                         color: Colors.white70,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
-                      user.address,
-                      style: AppTheme.bodySmall.copyWith(
+                      user.address ?? "-",
+                      style: const TextStyle(
+                        fontSize: 12,
                         color: Colors.white70,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
-                      user.telno,
-                      style: AppTheme.bodySmall.copyWith(
+                      user.telno ?? "-",
+                      style: const TextStyle(
+                        fontSize: 12,
                         color: Colors.white70,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-              ),
-              IconButton(
-                icon: const Icon(Icons.exit_to_app, color: Colors.white),
-                tooltip: 'Quit',
-                onPressed: () {
-                  if (Platform.isAndroid || Platform.isIOS) {
-                    SystemNavigator.pop();
-                  }
-                },
               ),
             ],
           ),
