@@ -523,12 +523,10 @@ class _DailyWorkListPageState extends State<DailyWorkListPage> {
                                         ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: Colors.white,
-                                            foregroundColor: Colors.blue,
+                                            foregroundColor: Colors.green,
                                             elevation: 2,
-                                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                            side: const BorderSide(color: Colors.blue, width: 1),
                                             shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(6),
+                                              borderRadius: BorderRadius.circular(20),
                                             ),
                                           ),
                                           onPressed: () {
@@ -553,7 +551,7 @@ class _DailyWorkListPageState extends State<DailyWorkListPage> {
                                             elevation: 2,
                                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                             shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(6),
+                                              borderRadius: BorderRadius.circular(20),
                                             ),
                                           ),
                                           onPressed: () {

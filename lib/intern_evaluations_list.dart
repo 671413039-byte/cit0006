@@ -392,7 +392,7 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                 });
               },
               child: const Text(
-                '+ เพิ่ม',
+                'เพิ่ม',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
             ),
@@ -539,10 +539,10 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(12),
-              color: Colors.blue[50],
+              color: const Color.fromARGB(255, 23, 163, 58),
               child: Text(
                 "แสดงผลกรองข้อมูล (${filteredDataList.length} รายการ)",
-                style: const TextStyle(color: Colors.blue),
+                style: const TextStyle(color: Color.fromARGB(255, 44, 243, 33)),
               ),
             ),
 
@@ -640,7 +640,7 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                     ),
                                     decoration: BoxDecoration(
                                       color: _getStatusColor(item['status']),
-                                      borderRadius: BorderRadius.circular(4),
+                                      borderRadius: BorderRadius.circular(20),
                                     ),
                                     child: Text(
                                       _getStatusText(item['status']),
@@ -766,14 +766,14 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.white,
-                                      foregroundColor: Colors.blue,
+                                      foregroundColor: Colors.green,
                                       elevation: 2,
                                       padding: const EdgeInsets.symmetric(
                                         horizontal: 12,
                                         vertical: 6,
                                       ),
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(6),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
                                     ),
                                     onPressed: () {
@@ -807,7 +807,7 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                         vertical: 6,
                                       ),
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(6),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
                                     ),
                                     onPressed: () {

@@ -653,17 +653,6 @@ class _DailyWorkFormPageState extends State<DailyWorkFormPage> {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: isLoading ? null : () => Navigator.pop(context),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
-                          foregroundColor: Colors.white,
-                        ),
-                        child: const Text("ยกเลิก"),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: ElevatedButton(
                         onPressed: isLoading ? null : _saveDailyWork,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.green[700],
@@ -681,6 +670,17 @@ class _DailyWorkFormPageState extends State<DailyWorkFormPage> {
                                 ),
                               )
                             : const Text("บันทึก"),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: isLoading ? null : () => Navigator.pop(context),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          foregroundColor: Colors.white,
+                        ),
+                        child: const Text("ยกเลิก"),
                       ),
                     ),
                   ],

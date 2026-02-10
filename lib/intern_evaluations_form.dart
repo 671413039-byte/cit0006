@@ -850,19 +850,6 @@ class _InternEvaluationsFormPageState extends State<InternEvaluationsFormPage> {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: isLoading
-                            ? null
-                            : () => Navigator.pop(context),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
-                          foregroundColor: Colors.white,
-                        ),
-                        child: const Text("ยกเลิก"),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: ElevatedButton(
                         onPressed: isLoading ? null : _saveEvaluation,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.green[700],
@@ -880,6 +867,19 @@ class _InternEvaluationsFormPageState extends State<InternEvaluationsFormPage> {
                                 ),
                               )
                             : const Text("บันทึก"),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: isLoading
+                            ? null
+                            : () => Navigator.pop(context),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          foregroundColor: Colors.white,
+                        ),
+                        child: const Text("ยกเลิก"),
                       ),
                     ),
                   ],
