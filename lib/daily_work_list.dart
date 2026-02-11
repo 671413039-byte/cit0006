@@ -331,15 +331,15 @@ class _DailyWorkListPageState extends State<DailyWorkListPage> {
       appBar: AppBar(
         title: const Text("บันทึกปฏิบัติงาน"),
         backgroundColor: Colors.green[700],
-        foregroundColor: Colors.white,
+        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
         elevation: 0,
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[700],
-                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                foregroundColor: const Color.fromARGB(255, 0, 84, 4),
                 elevation: 2,
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 shape: RoundedRectangleBorder(
@@ -523,7 +523,7 @@ class _DailyWorkListPageState extends State<DailyWorkListPage> {
                                         ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
-                                            foregroundColor: const Color.fromARGB(255, 0, 255, 0),
+                                            foregroundColor: const Color.fromARGB(255, 0, 98, 0),
                                             elevation: 2,
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(20),

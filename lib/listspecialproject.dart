@@ -247,8 +247,8 @@ class _ListSpecialProjectPageState extends State<ListSpecialProjectPage> {
                                         ).then((_) => fetchData());
                                       },
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.green[700],
-                                        foregroundColor: Colors.white,
+                                        backgroundColor: Colors.white,
+                                        foregroundColor: Colors.green[700],
                                       ),
                                       child: const Text("แก้ไข"),
                                     ),

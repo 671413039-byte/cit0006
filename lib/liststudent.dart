@@ -144,7 +144,7 @@ class _ListStudentPageState extends State<ListStudentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ข้อมูลนักเรียน"),
+        title: const Text("ข้อมูลนัก"),
         backgroundColor: Colors.green,
         actions: [
           ElevatedButton(
@@ -157,10 +157,10 @@ class _ListStudentPageState extends State<ListStudentPage> {
               ).then((_) => fetchData());
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green[700],
-              foregroundColor: Colors.white,
+              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+              foregroundColor: const Color.fromARGB(255, 0, 102, 16),
             ),
-            child: const Text("+ เพิ่ม "),
+            child: const Text(" เพิ่ม "),
           ),
           const SizedBox(width: 10),
         ],
@@ -249,8 +249,8 @@ class _ListStudentPageState extends State<ListStudentPage> {
                                       ).then((_) => fetchData());
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green[700],
-                                      foregroundColor: Colors.white,
+                                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                                      foregroundColor: const Color.fromARGB(255, 0, 73, 18),
                                     ),
                                     child: const Text("แก้ไข"),
                                   ),

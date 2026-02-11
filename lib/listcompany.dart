@@ -187,7 +187,7 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
               ).then((_) => fetchData());
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green[700],
+              backgroundColor: const Color.fromARGB(255, 0, 102, 5),
               foregroundColor: Colors.white,
             ),
             child: const Text("+ เพิ่ม "),
@@ -296,8 +296,8 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
                                             ).then((_) => fetchData());
                                           },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green[700],
-                                      foregroundColor: Colors.white,
+                                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                                      foregroundColor: const Color.fromARGB(255, 0, 77, 1),
                                     ),
                                     child: const Text("แก้ไข"),
                                   ),

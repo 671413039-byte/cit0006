@@ -361,15 +361,15 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
       appBar: AppBar(
         title: const Text("ประเมินผลสถานประกอบการณ์"),
         backgroundColor: Colors.green[700],
-        foregroundColor: Colors.white,
+        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
         elevation: 0,
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[700],
-                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                foregroundColor: const Color.fromARGB(255, 16, 87, 0),
                 elevation: 2,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -765,8 +765,8 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                 children: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green[700],
-                                      foregroundColor: Colors.white,
+                                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                                      foregroundColor: const Color.fromARGB(255, 0, 94, 30),
                                       elevation: 2,
                                       padding: const EdgeInsets.symmetric(
                                         horizontal: 12,
