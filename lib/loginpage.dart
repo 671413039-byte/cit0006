@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     try {
-      final url = Uri.parse("http://192.168.171.1/api_copy/checklogin.php");
+      final url = Uri.parse("http://192.168.1.228/api_copy/checklogin.php");
       final response = await http.post(
         url,
         body: {"username": username, "password": password},

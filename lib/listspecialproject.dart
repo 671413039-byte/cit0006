@@ -19,8 +19,8 @@ class _ListSpecialProjectPageState extends State<ListSpecialProjectPage> {
   bool isLoading = true;
   String? error;
 
-  // URL API (ปรับตามเครื่องที่รัน: 192.168.171.1 หรือ 10.0.2.2)
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  // URL API (ปรับตามเครื่องที่รัน: 192.168.1.228 หรือ 10.0.2.2)
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {

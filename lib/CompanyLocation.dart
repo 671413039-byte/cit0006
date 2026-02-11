@@ -13,7 +13,7 @@ class CompanyLocationPage extends StatefulWidget {
 }
 
 class _CompanyLocationPageState extends State<CompanyLocationPage> {
-	final String _baseUrl = "http://192.168.171.1/api_copy";
+	final String _baseUrl = "http://192.168.1.228/api_copy";
 	bool isLoading = true;
 	String? error;
 	List<Map<String, dynamic>> companies = [];

@@ -68,8 +68,8 @@ class _SpecialProjectPageState extends State<SpecialProjectPage> {
     }
 
     try {
-      // URL API (ปรับตามเครื่องที่รัน: 192.168.171.1 หรือ 10.0.2.2)
-      final url = Uri.parse("http://192.168.171.1/api_copy/savedataspecialproject.php"); 
+      // URL API (ปรับตามเครื่องที่รัน: 192.168.1.228 หรือ 10.0.2.2)
+      final url = Uri.parse("http://192.168.1.228/api_copy/savedataspecialproject.php"); 
       
       final response = await http.post(
         url,

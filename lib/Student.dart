@@ -122,7 +122,7 @@ class _StudentPageState extends State<StudentPage> {
       provincesError = null;
     });
     try {
-      final url = Uri.parse("http://192.168.171.1/api_copy/getprovince.php");
+      final url = Uri.parse("http://192.168.1.228/api_copy/getprovince.php");
       final response = await http.get(url).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
@@ -173,7 +173,7 @@ class _StudentPageState extends State<StudentPage> {
 
     try {
       final url = Uri.parse(
-        "http://192.168.171.1/api_copy/getamphur.php?province_code=$provinceCode",
+        "http://192.168.1.228/api_copy/getamphur.php?province_code=$provinceCode",
       );
 
       final response = await http.get(url).timeout(const Duration(seconds: 15));
@@ -237,7 +237,7 @@ class _StudentPageState extends State<StudentPage> {
 
     try {
       final url = Uri.parse(
-        "http://192.168.171.1/api_copy/gettumbol.php?amphur_code=$amphurCode",
+        "http://192.168.1.228/api_copy/gettumbol.php?amphur_code=$amphurCode",
       );
 
       final response = await http.get(url).timeout(const Duration(seconds: 15));
@@ -317,7 +317,7 @@ class _StudentPageState extends State<StudentPage> {
     }
 
     try {
-      final url = Uri.parse("http://192.168.171.1/api_copy/savedatastudent.php");
+      final url = Uri.parse("http://192.168.1.228/api_copy/savedatastudent.php");
       final response = await http.post(
         url,
         body: {

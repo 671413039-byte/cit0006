@@ -28,7 +28,7 @@ class _DailyWorkListPageState extends State<DailyWorkListPage> {
   List<Map<String, dynamic>> termsList = [];
   List<Map<String, dynamic>> internTypesList = [];
 
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {

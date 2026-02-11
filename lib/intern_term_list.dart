@@ -14,7 +14,7 @@ class _InternTermListPageState extends State<InternTermListPage> {
   Timer? timer;
   bool isLoading = true;
   String? error;
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {

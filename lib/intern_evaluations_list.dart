@@ -29,7 +29,7 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
   List<Map<String, dynamic>> companiesList = [];
   List<Map<String, dynamic>> termsList = [];
 
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {

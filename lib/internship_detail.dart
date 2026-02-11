@@ -21,7 +21,7 @@ class _InternshipDetailPageState extends State<InternshipDetailPage> {
   String? selectedTerm;
   int? selectedTypeIntern; // type_intern เป็น int จาก database
 
-  final String _baseUrl = "http://192.168.171.1/api_copy/internship_api.php";
+  final String _baseUrl = "http://192.168.1.228/api_copy/internship_api.php";
 
   @override
   void initState() {

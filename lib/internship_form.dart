@@ -29,7 +29,7 @@ class _InternshipFormPageState extends State<InternshipFormPage> {
   List<Map<String, dynamic>> companiesList = [];
   List<Map<String, dynamic>> termsList = [];
 
-  final String _baseUrl = "http://192.168.171.1/api_copy/internship_api.php";
+  final String _baseUrl = "http://192.168.1.228/api_copy/internship_api.php";
 
   @override
   void initState() {
@@ -385,14 +385,17 @@ class _InternshipFormPageState extends State<InternshipFormPage> {
                           final compId = company['company_id']?.toString() ?? '';
                           final compName = company['company_name']?.toString() ?? '';
                           final compAddress = company['address']?.toString() ?? company['company_address']?.toString() ?? '';
-                          final displayText = compName.isNotEmpty 
-                            ? "$compId - $compName"
-                            : compId;
                           return DropdownMenuItem(
                             value: compId,
                             child: Tooltip(
-                              message: compAddress,
-                              child: Text(displayText, overflow: TextOverflow.ellipsis),
+                              message: "$compId - $compName\n$compAddress",
+                              child: SizedBox(
+                                width: 250,
+                                child: Text(
+                                  compName,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
                             ),
                           );
                         }),
@@ -410,8 +413,19 @@ class _InternshipFormPageState extends State<InternshipFormPage> {
                       },
                       decoration: InputDecoration(
                         labelText: "สถานประกอบการ",
+                        filled: true,
+                        fillColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: Colors.grey),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: Colors.grey),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(color: Colors.green),
                         ),
                       ),
                     ),

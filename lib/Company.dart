@@ -194,7 +194,7 @@ class _CompanyPageState extends State<CompanyPage> {
     try {
       // ส่ง province_code ไปที่ API (GET query param)
       final url = Uri.parse(
-        "http://192.168.171.1/api_copy/getamphur.php?province_code=$provinceCode",
+        "http://192.168.1.228/api_copy/getamphur.php?province_code=$provinceCode",
       );
 
       final response = await http.get(url).timeout(const Duration(seconds: 15));
@@ -261,7 +261,7 @@ class _CompanyPageState extends State<CompanyPage> {
     try {
       // ส่ง amphur_code ไปที่ API (เปลี่ยนชื่อไฟล์ php และพารามิเตอร์)
       final url = Uri.parse(
-        "http://192.168.171.1/api_copy/gettumbol.php?amphur_code=$amphurCode",
+        "http://192.168.1.228/api_copy/gettumbol.php?amphur_code=$amphurCode",
       );
 
       final response = await http.get(url).timeout(const Duration(seconds: 15));
@@ -310,8 +310,8 @@ class _CompanyPageState extends State<CompanyPage> {
       provincesError = null;
     });
     try {
-      // ตรวจสอบ URL API ให้ถูกต้อง (ถ้าใช้ Emulator ต้องใช้ IP เครื่อง หรือ 10.0.2.2 แทน 192.168.171.1)
-      final url = Uri.parse("http://192.168.171.1/api_copy/getprovince.php");
+      // ตรวจสอบ URL API ให้ถูกต้อง (ถ้าใช้ Emulator ต้องใช้ IP เครื่อง หรือ 10.0.2.2 แทน 192.168.1.228)
+      final url = Uri.parse("http://192.168.1.228/api_copy/getprovince.php");
       final response = await http.get(url).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
@@ -392,7 +392,7 @@ class _CompanyPageState extends State<CompanyPage> {
 
     try {
       final response = await http.post(
-        Uri.parse("http://192.168.171.1/api_copy/savedatacompany.php"),
+        Uri.parse("http://192.168.1.228/api_copy/savedatacompany.php"),
         body: {
           "xcase": widget.xcase?.toString() ?? "",
           "company_id": widget.company_id ?? "", // สำคัญมากสำหรับการแก้ไข

@@ -33,7 +33,7 @@ class _DailyWorkFormPageState extends State<DailyWorkFormPage> {
 
   DateTime? workDate;
 
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {
@@ -433,19 +433,23 @@ class _DailyWorkFormPageState extends State<DailyWorkFormPage> {
                           : null)
                       : null,
                   hint: const Text("เลือก นักศึกษา"),
-                  items: studentsList.map((student) {
-                    return DropdownMenuItem(
-                      value: student['student_id'].toString(),
-                      child: Text(
-                        "${student['student_name']} (${student['student_id']})",
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    setState(() {
-                      selectedStudentId = value;
-                    });
-                  },
+                  items: widget.dailyWork == null
+                      ? studentsList.map((student) {
+                          return DropdownMenuItem(
+                            value: student['student_id'].toString(),
+                            child: Text(
+                              "${student['student_name']} (${student['student_id']})",
+                            ),
+                          );
+                        }).toList()
+                      : [],
+                  onChanged: widget.dailyWork == null
+                      ? (value) {
+                          setState(() {
+                            selectedStudentId = value;
+                          });
+                        }
+                      : null,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'กรุณาเลือก นักศึกษา';
@@ -466,23 +470,41 @@ class _DailyWorkFormPageState extends State<DailyWorkFormPage> {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
-                TextFormField(
-                  controller: workDateController,
-                  readOnly: true,
-                  onTap: () => _pickDate(context),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'กรุณาเลือกวันที่';
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    suffixIcon: const Icon(Icons.calendar_today),
-                  ),
-                ),
+                widget.dailyWork == null
+                    ? TextFormField(
+                        controller: workDateController,
+                        readOnly: true,
+                        onTap: () => _pickDate(context),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'กรุณาเลือกวันที่';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          suffixIcon: const Icon(Icons.calendar_today),
+                        ),
+                      )
+                    : Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              workDateController.text,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            const Icon(Icons.lock_outline, color: Colors.grey),
+                          ],
+                        ),
+                      ),
                 const SizedBox(height: 16),
 
                 // Term dropdown

@@ -17,7 +17,7 @@ class _ListStudentPageState extends State<ListStudentPage> {
   bool isLoading = true;
   String? error;
 
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {

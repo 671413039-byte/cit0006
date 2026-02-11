@@ -32,7 +32,7 @@ class _RegisterUserFormState extends State<RegisterUserForm> {
     final password = passwordController.text.trim();
 
     try {
-      String apiUrl = 'http://192.168.171.1/api_copy/adduser.php';
+      String apiUrl = 'http://192.168.1.228/api_copy/adduser.php';
       final url = Uri.parse(apiUrl); // [TODO: ใส่ URL เต็มของ API]
       final response = await http.post(
         url,

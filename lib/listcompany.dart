@@ -27,7 +27,7 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
   String? error;
 
   // URL API (ปรับตามเครื่องที่รัน)
-  final String _baseUrl = "http://192.168.171.1/api_copy";
+  final String _baseUrl = "http://192.168.1.228/api_copy";
 
   @override
   void initState() {
