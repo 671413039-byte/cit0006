@@ -187,8 +187,8 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
               ).then((_) => fetchData());
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 0, 102, 5),
-              foregroundColor: Colors.white,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.green[700],
             ),
             child: const Text("+ เพิ่ม "),
           ),
@@ -203,8 +203,8 @@ class _ListCompanyPageState extends State<ListCompanyPage> {
               );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey,
-              foregroundColor: Colors.white,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.green[700],
             ),
             child: const Text("ตำแหน่ง"),
           ),

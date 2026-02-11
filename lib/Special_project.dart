@@ -205,8 +205,8 @@ class _SpecialProjectPageState extends State<SpecialProjectPage> {
               child: ElevatedButton(
                 onPressed: _submitData,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: widget.xcase == 3 ? Colors.red : const Color.fromARGB(255, 255, 255, 255),
-                  foregroundColor: const Color.fromARGB(255, 36, 104, 0),
+                  backgroundColor: widget.xcase == 3 ? Colors.red : Colors.white,
+                  foregroundColor: widget.xcase == 3 ? Colors.white : Colors.green[700],
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 18),
                 ),

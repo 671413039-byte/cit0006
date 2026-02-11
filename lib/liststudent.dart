@@ -157,8 +157,8 @@ class _ListStudentPageState extends State<ListStudentPage> {
               ).then((_) => fetchData());
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-              foregroundColor: const Color.fromARGB(255, 0, 102, 16),
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.green[700],
             ),
             child: const Text(" เพิ่ม "),
           ),
