@@ -577,7 +577,7 @@ class _StudentPageState extends State<StudentPage> {
               child: ElevatedButton(
                 onPressed: _submitData,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: widget.xcase == 3 ? Colors.red : Colors.blue,
+                  backgroundColor: widget.xcase == 3 ? Colors.red : Colors.green[700],
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 18),

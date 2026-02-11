@@ -164,7 +164,8 @@ class _ListSpecialProjectPageState extends State<ListSpecialProjectPage> {
               ).then((_) => fetchData());
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 252, 252, 251),
+              backgroundColor: Colors.green[700],
+              foregroundColor: Colors.white,
             ),
             child: const Text("+ เพิ่ม "),
           ),
@@ -246,9 +247,8 @@ class _ListSpecialProjectPageState extends State<ListSpecialProjectPage> {
                                         ).then((_) => fetchData());
                                       },
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: const Color.fromARGB(
-                                          255, 252, 252, 251,
-                                        ),
+                                        backgroundColor: Colors.green[700],
+                                        foregroundColor: Colors.white,
                                       ),
                                       child: const Text("แก้ไข"),
                                     ),

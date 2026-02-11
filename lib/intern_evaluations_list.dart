@@ -368,8 +368,8 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.green[700],
+                backgroundColor: Colors.green[700],
+                foregroundColor: Colors.white,
                 elevation: 2,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -765,8 +765,8 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                 children: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.white,
-                                      foregroundColor: Colors.green,
+                                      backgroundColor: Colors.green[700],
+                                      foregroundColor: Colors.white,
                                       elevation: 2,
                                       padding: const EdgeInsets.symmetric(
                                         horizontal: 12,
@@ -793,7 +793,7 @@ class _InternEvaluationsListPageState extends State<InternEvaluationsListPage> {
                                     },
                                     child: const Text(
                                       'แก้ไข',
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                                     ),
                                   ),
                                   const SizedBox(width: 8),

@@ -814,7 +814,7 @@ class _CompanyPageState extends State<CompanyPage> {
               child: ElevatedButton(
                 onPressed: _submitDevice,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.green[700],
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 18),

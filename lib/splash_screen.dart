@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
               'Welcome!! CSIT Family',
               style: TextStyle(
                 fontSize: 30, // ขนาดตัวอักษร
-                color: Colors.blue, // สีตัวอักษร
+                color: const Color.fromARGB(255, 55, 0, 255), // สีตัวอักษร
                 fontWeight:
                   FontWeight.bold, // การกำหนดความหนาของตัวอักษร (ถ้าต้องการ)
               ),
